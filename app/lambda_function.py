@@ -1,7 +1,6 @@
 import json
 import urllib.parse
 import boto3
-import torch
 
 print('Loading function')
 
@@ -16,7 +15,7 @@ def lambda_handler(event, context):
     key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'], encoding='utf-8')
     try:
         response = s3.get_object(Bucket=bucket, Key=key)
-        print("Hello world from Lambda container!")
+        print("Hello world from Lambda container v2")
         return response['ContentType']
     except Exception as e:
         print(e)

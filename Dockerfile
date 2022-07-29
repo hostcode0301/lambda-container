@@ -1,5 +1,5 @@
 # Required Image for AWS Lambda
-FROM public.ecr.aws/lambda/python:3.8
+FROM amazon/aws-lambda-python:3.8
 
 # RUN apt-get update && apt-get install -y ffmpeg
 
